@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JCCQ</title>
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="http://www.songdobeer.com/songdo_html/lib/simplyscroll/simplyscroll.min.js"></script>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/jquery.marquee.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+
+</head>
+<body>
+    <div class="body-bg">
+        <header class="header">
+            <section class="sc-sticky">
+                <div class="fix-area">
+                        <nav class="connexion">
+                            <div class="connextion-inner">
+                                <a href="">
+                                    <div class="nav-icon">
+                                        <div class="arrow">
+                                            <svg height="100%" viewBox="0 0 25 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M23.9492 10.5236C23.9492 5.53378 19.9036 1.48859 14.9136 1.48859C9.92362 1.48859 5.87798 5.53378 5.87798 10.5236C5.87798 15.5134 9.92362 19.5586 14.9136 19.5586C19.9036 19.5586 23.9492 15.5134 23.9492 10.5236ZM14.9136 20.5586C20.4558 20.5586 24.9492 16.0658 24.9492 10.5236C24.9492 4.98141 20.4558 0.488594 14.9136 0.488593C9.37142 0.488593 4.87798 4.98141 4.87798 10.5236C4.87798 16.0658 9.37142 20.5586 14.9136 20.5586Z" fill=""></path>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.4638 7.0234L18.6458 10.2054C18.8411 10.4006 18.8411 10.7172 18.6458 10.9125L15.4638 14.0945C15.2686 14.2897 14.952 14.2897 14.7567 14.0945C14.5615 13.8992 14.5615 13.5826 14.7567 13.3874L17.0852 11.0589L0 11.0589L0 10.0589L17.0852 10.0589L14.7567 7.73051C14.5615 7.53524 14.5615 7.21866 14.7567 7.0234C14.952 6.82814 15.2686 6.82814 15.4638 7.0234Z" fill="currentcolor"></path>
+                                            </svg>
+                                        </div>
+                                        <div class="circle">
+                                            <svg height="100%" viewBox="0 0 25 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M23.9492 10.5236C23.9492 5.53378 19.9036 1.48859 14.9136 1.48859C9.92362 1.48859 5.87798 5.53378 5.87798 10.5236C5.87798 15.5134 9.92362 19.5586 14.9136 19.5586C19.9036 19.5586 23.9492 15.5134 23.9492 10.5236ZM14.9136 20.5586C20.4558 20.5586 24.9492 16.0658 24.9492 10.5236C24.9492 4.98141 20.4558 0.488594 14.9136 0.488593C9.37142 0.488593 4.87798 4.98141 4.87798 10.5236C4.87798 16.0658 9.37142 20.5586 14.9136 20.5586Z" fill="currentcolor"></path>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.4638 7.0234L18.6458 10.2054C18.8411 10.4006 18.8411 10.7172 18.6458 10.9125L15.4638 14.0945C15.2686 14.2897 14.952 14.2897 14.7567 14.0945C14.5615 13.8992 14.5615 13.5826 14.7567 13.3874L17.0852 11.0589L0 11.0589L0 10.0589L17.0852 10.0589L14.7567 7.73051C14.5615 7.53524 14.5615 7.21866 14.7567 7.0234C14.952 6.82814 15.2686 6.82814 15.4638 7.0234Z" fill=""></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <p>CONNEXION</p>
+                                </a>
+                                <button class="nav-menu">
+                                    <div class="menu-line top"></div>
+                                    <div class="menu-line mid"></div>
+                                    <div class="menu-line bottom"></div>
+                                </button>
+                            </div>
+                        </nav>
+                       
+                </div>
+                <div class="side-menu">
+                    <div class="menu-area">
+                        <div class="menu-left">
+                            <h2 class="logo"><a href=""><img src="./assets/img/menu-logo.svg" alt=""></a>
+                            </h2>
+                            <a href="" class="title">
+                                Programmation<br>
+                                La JCCQ<br>
+                                Écosystème<br>
+                                Devenir membre
+                            </a>
+                            <ul class="manu-list">
+                                <li class="menu-item">
+                                    <a href="">Jeune Personnalité d'Affaires</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="">Bourse Jeune Entreprise</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="">Club affaires</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="">Passeport membre</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="menu-right">
+                                <div class="img-box">
+                                        <div class="img"><div class="bg"></div></div>
+                                </div>
+                    
+                        </div>
+                        <nav class="connexion">
+                            <div class="connextion-inner">
+                                <a href="">
+                                    <div class="nav-icon">
+                                        <div class="arrow">
+                                            <svg height="100%" viewBox="0 0 25 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M23.9492 10.5236C23.9492 5.53378 19.9036 1.48859 14.9136 1.48859C9.92362 1.48859 5.87798 5.53378 5.87798 10.5236C5.87798 15.5134 9.92362 19.5586 14.9136 19.5586C19.9036 19.5586 23.9492 15.5134 23.9492 10.5236ZM14.9136 20.5586C20.4558 20.5586 24.9492 16.0658 24.9492 10.5236C24.9492 4.98141 20.4558 0.488594 14.9136 0.488593C9.37142 0.488593 4.87798 4.98141 4.87798 10.5236C4.87798 16.0658 9.37142 20.5586 14.9136 20.5586Z" fill=""></path>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.4638 7.0234L18.6458 10.2054C18.8411 10.4006 18.8411 10.7172 18.6458 10.9125L15.4638 14.0945C15.2686 14.2897 14.952 14.2897 14.7567 14.0945C14.5615 13.8992 14.5615 13.5826 14.7567 13.3874L17.0852 11.0589L0 11.0589L0 10.0589L17.0852 10.0589L14.7567 7.73051C14.5615 7.53524 14.5615 7.21866 14.7567 7.0234C14.952 6.82814 15.2686 6.82814 15.4638 7.0234Z" fill="currentcolor"></path>
+                                            </svg>
+                                        </div>
+                                        <div class="circle">
+                                            <svg height="100%" viewBox="0 0 25 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M23.9492 10.5236C23.9492 5.53378 19.9036 1.48859 14.9136 1.48859C9.92362 1.48859 5.87798 5.53378 5.87798 10.5236C5.87798 15.5134 9.92362 19.5586 14.9136 19.5586C19.9036 19.5586 23.9492 15.5134 23.9492 10.5236ZM14.9136 20.5586C20.4558 20.5586 24.9492 16.0658 24.9492 10.5236C24.9492 4.98141 20.4558 0.488594 14.9136 0.488593C9.37142 0.488593 4.87798 4.98141 4.87798 10.5236C4.87798 16.0658 9.37142 20.5586 14.9136 20.5586Z" fill="currentcolor"></path>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.4638 7.0234L18.6458 10.2054C18.8411 10.4006 18.8411 10.7172 18.6458 10.9125L15.4638 14.0945C15.2686 14.2897 14.952 14.2897 14.7567 14.0945C14.5615 13.8992 14.5615 13.5826 14.7567 13.3874L17.0852 11.0589L0 11.0589L0 10.0589L17.0852 10.0589L14.7567 7.73051C14.5615 7.53524 14.5615 7.21866 14.7567 7.0234C14.952 6.82814 15.2686 6.82814 15.4638 7.0234Z" fill=""></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <p>CONNEXION</p>
+                                </a>
+                                <button class="nav-menu">
+                                    <div class="menu-line top"></div>
+                                    <div class="menu-line mid"></div>
+                                    <div class="menu-line bottom"></div>
+                                </button>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+                <div class="sticky-area">
+                    <h1 class="blind">Jeune chambre de commerce de Quebec
+                    </h1>
+                    <div class="top-logo"><img src="./assets/img/logo.svg" alt="">
+                    </div>
+                    <div class="main-logo"><img src="./assets/img/main-logo.svg" alt="">
+                    </div>
+                    <div class="main-desc"><span>Propulsez</span> votre réseau et vos affaires.
+                    </div>
+                </div>
+            </section>
+        </header>
+        <main class="main">
+            <section class="sc-intro">
+                <div class="sticky-area">
+                    <div class="intro-area">
+                        <div class="intro-overlay">
+                            <div class="intro-box">
+                                <div class="img-box"></div>
+                            </div>
+                            <div class="text-box">
+                                <h2>Créez des opportunités durables de<br> développement personnel et professionnel</h2>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </section>
+            <section class="sc-event">
+                <h2 class="title">Découvrez nos<br>
+                    événements</h2>
+                <div class="event-area">
+                    <a href="" class="event-box">
+                        <div class="img-box">
+                            <img src="./assets/img/event1.jpg" alt="">
+                            <div class="hover">
+                                <div class="plus">
+                                    <span>
+                                        <p>Voir plus
+                                        </p>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 29.541 22.323">
+                                            <g id="Group_44" data-name="Group 44" transform="translate(0 1.014)">
+                                              <path id="Path_1" data-name="Path 1" d="M115.445,20.633l9.311-10.148L115.445.338" transform="translate(-97.25 -0.338)" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"></path>
+                                              <line id="Line_1" data-name="Line 1" x1="27.506" transform="translate(0 10.148)" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"></line>
+                                            </g>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <em>7/9/23</em>
+                        <div class="text-box">
+                            <p>5 à 7</p>
+                            <strong>Lancement de saison 23-24</strong>
+                        </div>
+                    </a>
+                    <a href="" class="event-box">
+                        <div class="img-box">
+                            <img src="./assets/img/event2.webp" alt="">
+                            <div class="hover">
+                                <div class="plus">
+                                    <span>
+                                        <p>Voir plus
+                                        </p>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 29.541 22.323">
+                                            <g id="Group_44" data-name="Group 44" transform="translate(0 1.014)">
+                                              <path id="Path_1" data-name="Path 1" d="M115.445,20.633l9.311-10.148L115.445.338" transform="translate(-97.25 -0.338)" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"></path>
+                                              <line id="Line_1" data-name="Line 1" x1="27.506" transform="translate(0 10.148)" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"></line>
+                                            </g>
+                                        </svg>
+                                    </span>
+                                </div>
+                        </div>
+                        </div>
+                        <em>5/12/23</em>
+                        <div class="text-box">
+                            <strong>Bootcamp de la relève - Propulsez votre marque</strong>
+                        </div>
+                    </a>
+                </div>
+                <div class="link-box">
+                    <a href="">
+                        <div class="link">
+                            <p>Tous nos événements</p>
+                            <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.3395 5.80676L10.0601 8.94555L10.7516 9.66797L15.3081 5.30676L10.7516 0.945551L10.0601 1.66797L13.3395 4.80676H0.584961V5.80676H13.3395Z" fill="currentcolor"></path>
+                            </svg>
+                        </div>
+                        <div class="color">
+                            <div class="link">
+                                <p>Tous nos événements</p>
+                                <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M13.3395 5.80676L10.0601 8.94555L10.7516 9.66797L15.3081 5.30676L10.7516 0.945551L10.0601 1.66797L13.3395 4.80676H0.584961V5.80676H13.3395Z" fill="currentcolor"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </section>
+            <section class="sc-membre">
+                <div class="title-area">
+                    <h2 class="title">
+                        <p class="fir">Des outils</p>
+                        <p class="sec">pour accélérer</p>
+                        <p class="thr">votre</p>
+                        <div class="change"></div>
+                    </h2>
+                </div>
+                <div class="sticky-area">
+                    <div class="sticky-box">
+                        <div class="membre-left">
+                            <strong>Devenir membre</strong>
+                            <p>Faites partie d'une communauté conviviale,<br>
+                            audacieuse, dynamique et qui partage vos enjeux.</p>
+                            <div class="link-box">
+                                <a href="">
+                                    <div class="link">
+                                        <p>M’insrire maintenant</p>
+                                        <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M13.3395 5.80676L10.0601 8.94555L10.7516 9.66797L15.3081 5.30676L10.7516 0.945551L10.0601 1.66797L13.3395 4.80676H0.584961V5.80676H13.3395Z" fill="currentcolor"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="color">
+                                        <div class="link">
+                                            <p>M’insrire maintenant</p>
+                                            <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.3395 5.80676L10.0601 8.94555L10.7516 9.66797L15.3081 5.30676L10.7516 0.945551L10.0601 1.66797L13.3395 4.80676H0.584961V5.80676H13.3395Z" fill="currentcolor"></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="membre-right">
+                        <ul class="membre-list">
+                            <li class="membre-item">
+                                <strong>Événements</strong>
+                                <p>Obtenez des rabais sur tous nos événements et soyez les premiers au courant afin d'assurer votre place dans nos activités aux espaces limités et/ou pour membres seulement.
+                                </p>
+                            </li>
+                            <li class="membre-item">
+                                <strong>Événements</strong>
+                                <p>Obtenez des rabais sur tous nos événements et soyez les premiers au courant afin d'assurer votre place dans nos activités aux espaces limités et/ou pour membres seulement.
+                                </p>
+                            </li>
+                            <li class="membre-item">
+                                <strong>Événements</strong>
+                                <p>Obtenez des rabais sur tous nos événements et soyez les premiers au courant afin d'assurer votre place dans nos activités aux espaces limités et/ou pour membres seulement.
+                                </p>
+                            </li>
+                            <li class="membre-item">
+                                <strong>Événements</strong>
+                                <p>Obtenez des rabais sur tous nos événements et soyez les premiers au courant afin d'assurer votre place dans nos activités aux espaces limités et/ou pour membres seulement.
+                                </p>
+                            </li>
+                            <li class="membre-item">
+                                <strong>Événements</strong>
+                                <p>Obtenez des rabais sur tous nos événements et soyez les premiers au courant afin d'assurer votre place dans nos activités aux espaces limités et/ou pour membres seulement.
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="sc-nouvelles">
+                <div class="title-area">
+                    <div class="text-box">
+                        <em>NOUVELLES</em>
+                        <h2>
+                            <p class="fir">Sondage Léger sur les<br></p>
+                            <p class="sec">priorités de<br></p>
+                            <p class="thr">développement pour<br></p>
+                            <p class="frd">la Zone économique<br></p>
+                            <p class="fiv">métropolitaine</p>
+                        </h2>
+                        <div class="link-box blue">
+                            <a href="">
+                                <div class="link">
+                                    <p>Résultats du sondage</p>
+                                    <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M13.3395 5.80676L10.0601 8.94555L10.7516 9.66797L15.3081 5.30676L10.7516 0.945551L10.0601 1.66797L13.3395 4.80676H0.584961V5.80676H13.3395Z" fill="currentcolor"></path>
+                                    </svg>
+                                </div>
+                                <div class="color">
+                                    <div class="link">
+                                        <p>Résultats du sondage</p>
+                                        <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M13.3395 5.80676L10.0601 8.94555L10.7516 9.66797L15.3081 5.30676L10.7516 0.945551L10.0601 1.66797L13.3395 4.80676H0.584961V5.80676H13.3395Z" fill="currentcolor"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="img-box">
+                        <img src="./assets/img/novelles.jpg" alt="">
+                    </div>
+                </div>
+                <div class="partner-area">
+                    <div class="logo-box">
+                        <ul class="logo-list">
+                            <li class="logo-item">
+                                <img src="./assets/img/partner1.png" alt="">
+                            </li>
+                            <li class="logo-item">
+                                <img src="./assets/img/partner2.png" alt="">
+                            </li>
+                            <li class="logo-item">
+                                <img src="./assets/img/partner3.png" alt="">
+                            </li>
+                            <li class="logo-item">
+                                <img src="./assets/img/partner4.jpg" alt="">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="desc-box">
+                        <strong>Nos partenaires</strong>
+                        <p class="desc">Nos partenaires sont des acteurs importants qui contribuent au développement et au rayonnement de <span>la relève d’affaires de Québec.</span>
+                        </p>
+                        <div class="link-box blue">
+                            <a href="">
+                                <div class="link">
+                                    <p>Nos partenaires</p>
+                                    <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M13.3395 5.80676L10.0601 8.94555L10.7516 9.66797L15.3081 5.30676L10.7516 0.945551L10.0601 1.66797L13.3395 4.80676H0.584961V5.80676H13.3395Z" fill="currentcolor"></path>
+                                    </svg>
+                                </div>
+                                <div class="color">
+                                    <div class="link">
+                                        <p>Nos partenaires</p>
+                                        <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M13.3395 5.80676L10.0601 8.94555L10.7516 9.66797L15.3081 5.30676L10.7516 0.945551L10.0601 1.66797L13.3395 4.80676H0.584961V5.80676H13.3395Z" fill="currentcolor"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="sc-les">
+                <div class="title-area">
+                    <strong>
+                        <p class="fir">Les Jeunes<br></p>
+                        <p class="sec">Personnalités<br></p>
+                        <p class="thr">d'Affaires 2022</p>
+                    </strong>
+                    <span>
+                        <p class="fir">Voici nos 8 Jeunes Personnalités d'Affaires<br> </p>
+                        <p class="sec">qui se distinguent par leur influence<br></p>
+                        <p class="thr">positive, leur leadership, leur détermination<br></p>
+                        <p class="for">et leur vision.</p>
+                    </span>
+                    <div class="link-box">
+                        <a href="">
+                            <div class="link">
+                                <p>Découvrez les</p>
+                                <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M13.3395 5.80676L10.0601 8.94555L10.7516 9.66797L15.3081 5.30676L10.7516 0.945551L10.0601 1.66797L13.3395 4.80676H0.584961V5.80676H13.3395Z" fill="currentcolor"></path>
+                                </svg>
+                            </div>
+                            <div class="color">
+                                <div class="link">
+                                    <p>Découvrez les</p>
+                                    <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M13.3395 5.80676L10.0601 8.94555L10.7516 9.66797L15.3081 5.30676L10.7516 0.945551L10.0601 1.66797L13.3395 4.80676H0.584961V5.80676H13.3395Z" fill="currentcolor"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="img-area">
+                        <div class="roll-left">
+                            <ul class="roll-list left">
+                                <li class="roll-item">
+                                    <img src="./assets/img/members1.jpg" alt="">
+                                    <span>Marie-Pier Frenette</span>
+                                </li>
+                                <li class="roll-item">
+                                    <img src="./assets/img/members2.jpg" alt="">
+                                    <span>Béatrice Turcotte Ouellet</span>
+                                </li>
+                                <li class="roll-item">
+                                    <img src="./assets/img/members3.jpg" alt="">
+                                    <span>Charles Demers</span>
+                                </li>
+                                <li class="roll-item">
+                                    <img src="./assets/img/members4.jpg" alt="">
+                                    <span>Jennifer Guay</span>
+                                </li>
+                                <li class="roll-item">
+                                    <img src="./assets/img/members5.jpg" alt="">
+                                    <span>Lysanne Doyon</span>
+                                </li>
+                                <li class="roll-item">
+                                    <img src="./assets/img/members6.jpg" alt="">
+                                    <span>Sébastien Fiset</span>
+                                </li>
+                                <li class="roll-item">
+                                    <img src="./assets/img/members7.jpg" alt="">
+                                    <span>Vincent Zaoré</span>
+                                </li>
+                                <li class="roll-item">
+                                    <img src="./assets/img/members8.jpg" alt="">
+                                    <span>Virginie Boivin</span>
+                                </li>
+                            </ul>
+                            <ul class="roll-list left">
+                                <li class="roll-item">
+                                    <img src="./assets/img/members1.jpg" alt="">
+                                    <span>Marie-Pier Frenette</span>
+                                </li>
+                                <li class="roll-item">
+                                    <img src="./assets/img/members2.jpg" alt="">
+                                    <span>Béatrice Turcotte Ouellet</span>
+                                </li>
+                                <li class="roll-item">
+                                    <img src="./assets/img/members3.jpg" alt="">
+                                    <span>Charles Demers</span>
+                                </li>
+                                <li class="roll-item">
+                                    <img src="./assets/img/members4.jpg" alt="">
+                                    <span>Jennifer Guay</span>
+                                </li>
+                                <li class="roll-item">
+                                    <img src="./assets/img/members5.jpg" alt="">
+                                    <span>Lysanne Doyon</span>
+                                </li>
+                                <li class="roll-item">
+                                    <img src="./assets/img/members6.jpg" alt="">
+                                    <span>Sébastien Fiset</span>
+                                </li>
+                                <li class="roll-item">
+                                    <img src="./assets/img/members7.jpg" alt="">
+                                    <span>Vincent Zaoré</span>
+                                </li>
+                                <li class="roll-item">
+                                    <img src="./assets/img/members8.jpg" alt="">
+                                    <span>Virginie Boivin</span>
+                                </li>
+                            </ul>
+                        </div>
+                  
+                        <div class="roll-right">
+                            <ul class="roll-list right">
+                                <li class="roll-item">
+                                    <img src="./assets/img/members1.jpg" alt="">
+                                    <span>Marie-Pier Frenette</span>
+                                </li>
+                                <li class="roll-item">
+                                    <img src="./assets/img/members2.jpg" alt="">
+                                    <span>Béatrice Turcotte Ouellet</span>
+                                </li>
+                                <li class="roll-item">
+                                    <img src="./assets/img/members3.jpg" alt="">
+                                    <span>Charles Demers</span>
+                                </li>
+                                <li class="roll-item">
+                                    <img src="./assets/img/members4.jpg" alt="">
+                                    <span>Jennifer Guay</span>
+                                </li>
+                                <li class="roll-item">
+                                    <img src="./assets/img/members5.jpg" alt="">
+                                    <span>Lysanne Doyon</span>
+                                </li>
+                                <li class="roll-item">
+                                    <img src="./assets/img/members6.jpg" alt="">
+                                    <span>Sébastien Fiset</span>
+                                </li>
+                                <li class="roll-item">
+                                    <img src="./assets/img/members7.jpg" alt="">
+                                    <span>Vincent Zaoré</span>
+                                </li>
+                                <li class="roll-item">
+                                    <img src="./assets/img/members8.jpg" alt="">
+                                    <span>Virginie Boivin</span>
+                                </li>
+                            </ul>
+                            <ul class="roll-list right">
+                                <li class="roll-item">
+                                    <img src="./assets/img/members1.jpg" alt="">
+                                    <span>Marie-Pier Frenette</span>
+                                </li>
+                                <li class="roll-item">
+                                    <img src="./assets/img/members2.jpg" alt="">
+                                    <span>Béatrice Turcotte Ouellet</span>
+                                </li>
+                                <li class="roll-item">
+                                    <img src="./assets/img/members3.jpg" alt="">
+                                    <span>Charles Demers</span>
+                                </li>
+                                <li class="roll-item">
+                                    <img src="./assets/img/members4.jpg" alt="">
+                                    <span>Jennifer Guay</span>
+                                </li>
+                                <li class="roll-item">
+                                    <img src="./assets/img/members5.jpg" alt="">
+                                    <span>Lysanne Doyon</span>
+                                </li>
+                                <li class="roll-item">
+                                    <img src="./assets/img/members6.jpg" alt="">
+                                    <span>Sébastien Fiset</span>
+                                </li>
+                                <li class="roll-item">
+                                    <img src="./assets/img/members7.jpg" alt="">
+                                    <span>Vincent Zaoré</span>
+                                </li>
+                                <li class="roll-item">
+                                    <img src="./assets/img/members8.jpg" alt="">
+                                    <span>Virginie Boivin</span>
+                                </li>
+                            </ul>
+                        </div>
+                </div>
+                
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="footer-top">
+                <h2 class="title"><span>Inscrivez-vous</span> à notre infolettre et obtenez des avantages exclusifs
+                </h2>
+                <div class="form-area">
+                    <div class="form-top">
+                        <div class="form-box">
+                            <form action=""><input type="text" placeholder="Votre prénom"></form>
+                        </div>
+                        <div class="form-box">
+                            <form action=""><input type="text" placeholder="Votre nom"></form>
+                        </div>
+                    </div>
+                    <div class="form-box last">
+                        <form action=""><input type="text" placeholder="Votre courriel" class="last">
+                            <div class="link-box">
+                                <a href="">
+                                    <div class="link">
+                                        <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M13.3395 5.80676L10.0601 8.94555L10.7516 9.66797L15.3081 5.30676L10.7516 0.945551L10.0601 1.66797L13.3395 4.80676H0.584961V5.80676H13.3395Z" fill="currentcolor"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="color">
+                                        <div class="link">
+                                            <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M13.3395 5.80676L10.0601 8.94555L10.7516 9.66797L15.3081 5.30676L10.7516 0.945551L10.0601 1.66797L13.3395 4.80676H0.584961V5.80676H13.3395Z" fill="currentcolor"></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="list-area">
+                    <div class="list-box">
+                        <ul class="footer-list">
+                            <li class="footer-item title">
+                                <a href="">
+                                    Nos événements
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="">
+                                    Programmation
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="">
+                                    Réseautage
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="">
+                                    5 à 7
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="">
+                                    Activités sportives
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="">
+                                    Formations
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="">
+                                    Conférences
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="footer-list">
+                            <li class="footer-item title">
+                                <a href="">
+                                    Nos événements
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="">
+                                    Programmation
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="">
+                                    Réseautage
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="">
+                                    5 à 7
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="">
+                                    Activités sportives
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="">
+                                    Formations
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="">
+                                    Conférences
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="footer-list">
+                            <li class="footer-item title">
+                                <a href="">
+                                    Nos événements
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="">
+                                    Programmation
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="">
+                                    Réseautage
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="">
+                                    5 à 7
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="">
+                                    Activités sportives
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="">
+                                    Formations
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="">
+                                    Conférences
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="footer-list">
+                            <li class="footer-item title">
+                                <a href="">
+                                    Nos événements
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="">
+                                    Programmation
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="">
+                                    Réseautage
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="">
+                                    5 à 7
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="">
+                                    Activités sportives
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="">
+                                    Formations
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="">
+                                    Conférences
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="footer-list">
+                            <li class="footer-item title">
+                                <a href="">
+                                    Nos événements
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="">
+                                    Programmation
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="">
+                                    Réseautage
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="">
+                                    5 à 7
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="">
+                                    Activités sportives
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="">
+                                    Formations
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="">
+                                    Conférences
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="logo-area">
+                        <a href=""><img src="./assets/img/footer-logo.png" alt=""></a>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="footer-cc">
+                <div class="cc-left">
+                    <p class="cc">© JEUNE CHAMBRE DE COMMERCE DE QUÉBEC , 2023. TOUS DROITS RÉSERVÉS.
+                        <a href=""> POLITIQUE DE CONFIDENTIALITÉ
+                        </a>
+                    </p>
+                    <p class="logo">Web supérieur par <a href=""><img src="./assets/img/footer-logo2.svg" alt=""></a></p>
+                </div>
+                <div class="cc-right">
+                    <div class="sns-box">
+                        <a href="" class="instagram">
+                            <svg height="100%" viewBox="0 0 681 682" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M679.667 200.314C678.071 164.112 672.216 139.224 663.83 117.657C655.179 94.7654 641.869 74.2702 624.431 57.2325C607.393 39.9297 586.763 26.4846 564.136 17.9684C542.445 9.58208 517.686 3.72781 481.485 2.13166C445.012 0.400336 433.434 0 340.93 0C248.426 0 236.848 0.400336 200.511 1.99648C164.309 3.59263 139.42 9.4521 117.859 17.8332C94.9622 26.4846 74.467 39.7945 57.4293 57.2325C40.1264 74.2702 26.6866 94.9006 18.1651 117.527C9.77886 139.224 3.92459 163.977 2.32844 200.179C0.597114 236.651 0.196777 248.229 0.196777 340.733C0.196777 433.237 0.597114 444.816 2.19326 481.153C3.78941 517.354 9.64888 542.243 18.0352 563.809C26.6866 586.701 40.1264 607.196 57.4293 624.234C74.467 641.537 95.0973 654.982 117.724 663.498C139.42 671.884 164.174 677.739 200.381 679.335C236.713 680.936 248.296 681.331 340.8 681.331C433.304 681.331 444.882 680.936 481.219 679.335C517.421 677.739 542.31 671.884 563.871 663.498C609.66 645.795 645.862 609.593 663.565 563.809C671.946 542.113 677.805 517.354 679.402 481.153C680.998 444.816 681.398 433.237 681.398 340.733C681.398 248.229 681.263 236.651 679.667 200.314ZM618.311 478.491C616.845 511.765 611.256 529.734 606.597 541.713C595.149 571.395 571.591 594.952 541.909 606.401C529.93 611.059 511.832 616.648 478.687 618.109C442.751 619.711 431.973 620.106 341.065 620.106C250.158 620.106 239.245 619.711 203.438 618.109C170.163 616.648 152.195 611.059 140.216 606.401C125.445 600.942 112 592.29 101.087 580.977C89.7734 569.929 81.122 556.619 75.6628 541.848C71.0044 529.869 65.4152 511.765 63.9543 478.626C62.3529 442.689 61.9578 431.906 61.9578 340.998C61.9578 250.091 62.3529 239.178 63.9543 203.376C65.4152 170.101 71.0044 152.133 75.6628 140.154C81.122 125.378 89.7734 111.938 101.222 101.02C112.265 89.7066 125.575 81.0552 140.351 75.6012C152.33 70.9428 170.433 65.3536 203.573 63.8875C239.51 62.2913 250.293 61.891 341.195 61.891C432.238 61.891 443.016 62.2913 478.823 63.8875C512.097 65.3536 530.066 70.9428 542.045 75.6012C556.815 81.0552 570.26 89.7066 581.174 101.02C592.487 112.068 601.138 125.378 606.597 140.154C611.256 152.133 616.845 170.231 618.311 203.376C619.907 239.313 620.308 250.091 620.308 340.998C620.308 431.906 619.907 442.554 618.311 478.491ZM340.93 165.709C244.304 165.709 165.905 244.102 165.905 340.734C165.905 437.366 244.304 515.759 340.93 515.759C437.562 515.759 515.955 437.366 515.955 340.734C515.955 244.102 437.562 165.709 340.93 165.709ZM340.93 454.268C278.244 454.268 227.396 403.426 227.396 340.734C227.396 278.042 278.244 227.2 340.93 227.2C403.622 227.2 454.465 278.042 454.465 340.734C454.465 403.426 403.622 454.268 340.93 454.268ZM522.875 199.648C545.445 199.648 563.74 181.352 563.74 158.788C563.74 136.218 545.445 117.928 522.875 117.928C500.311 117.928 482.015 136.218 482.015 158.788C482.015 181.352 500.311 199.648 522.875 199.648Z" fill="currentcolor"></path>
+                            </svg>
+                        </a>
+                        <a href="" class="facebook">
+                            <svg height="100%" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M10.6672 19.4444H1.35444C0.761557 19.4444 0.28125 18.9638 0.28125 18.3712V1.07318C0.28125 0.480381 0.761632 0 1.35444 0H18.6526C19.2453 0 19.7257 0.480381 19.7257 1.07318V18.3712C19.7257 18.9639 19.2452 19.4444 18.6526 19.4444H13.6977V11.9145H16.2251L16.6036 8.97993H13.6977V7.10639C13.6977 6.25678 13.9336 5.67778 15.1519 5.67778L16.7059 5.6771V3.05241C16.4371 3.01665 15.5147 2.93675 14.4415 2.93675C12.201 2.93675 10.6672 4.30432 10.6672 6.81577V8.97993H8.13321V11.9145H10.6672V19.4444Z" fill="currentcolor"></path>
+                            </svg>
+                        </a>
+                        <a href="" class="linkdin">
+                            <svg aria-hidden="true" height="100%" viewBox="0 0 22 22" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0)">
+                                <path d="M21.9946 22.0001V21.9991H22.0001V14.0529C22.0001 10.1655 21.1632 7.17102 16.6186 7.17102C14.4339 7.17102 12.9678 8.36991 12.3692 9.50651H12.306V7.53394H7.99707V21.9991H12.4839V14.8365C12.4839 12.9506 12.8414 11.127 15.1769 11.127C17.478 11.127 17.5123 13.2792 17.5123 14.9575V22.0001H21.9946Z"></path>
+                                <path d="M0.691162 7.53479H5.18338V22H0.691162V7.53479Z"></path>
+                                <path d="M2.93506 0.333374C1.49874 0.333374 0.333252 1.49886 0.333252 2.93518C0.333252 4.3715 1.49874 5.56136 2.93506 5.56136C4.37138 5.56136 5.53686 4.3715 5.53686 2.93518C5.53596 1.49886 4.37047 0.333374 2.93506 0.333374V0.333374Z"></path>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0">
+                                <rect width="21.6667" height="21.6667" fill="white" transform="translate(0.333252 0.333374)"></rect>
+                                </clipPath>
+                                </defs>
+                            </svg>
+                        </a>
+                        <a href="" class="youtube">
+                            <svg height="100%" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>YouTube</title>
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="currentColor"></path>
+                            </svg>
+                        </a>
+                        <a href="" class="twitter">
+                            <svg height="100%" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Twitter</title><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" fill="currentColor">
+                            </path>
+                            </svg>
+                        </a>
+                    </div>
+                    <address>1150 RUE CLAIRE-FONTAINE, BUR. 740 QUÉBEC (QC) G1R 5G4</address>
+                    <p>581-333-5227</p>
+                    <a href="">JCCQ@JCCQ.QC.CA</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+</body>
+</html>
